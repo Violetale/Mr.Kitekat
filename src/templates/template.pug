@@ -1,0 +1,35 @@
+doctype html
+html(lang='en')
+    head
+        title #{title}
+        meta(charset="UTF-8")
+        meta(name='description' content='')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+
+        block scripts
+
+        block vars
+            -
+                //-sets for header
+                const aboutUs ={text:"О нас",link:"#"};
+                const services ={text:"Услуги",link:"#",mods:'withSub'};
+                const vacancies ={text:"Вакансии",link:"#"};
+                const news ={text:"Новости",link:"#"};
+                const agreement ={text:"Соглашения",link:"#"};
+                const mainMenuItems=[aboutUs,services,vacancies,news,agreement];//список элементов меню
+                const buttonLogin ="Login";
+                const buttonRegister="Register";
+                const userName = 'Cosmin Negoita';
+                //-sets for footer
+                const footerText="Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."
+                const copyright='Copyright © 2018 Toxin UI Kit. All rights reserved.'
+                const footerNavigation={title:"Navigation",items:['About Us','News','Support','Products']};
+                const footerAboutUs={title:'About Us',items:['Who we are','Our team','Careers','Investors']};
+                const footerSupport={title:'Support',items:['Documentation','Community','Get in Touch']};
+                const footerNavItems=[footerNavigation,footerAboutUs,footerSupport];
+                const subscribe ={title:'Subscribe to our newsletter',text:"Receive our latest news and promotions in your inbox!"};
+                block
+
+    body
+        block content

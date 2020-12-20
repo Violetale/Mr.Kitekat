@@ -1,0 +1,28 @@
+mixin button(params={})
+    - const{mods='',text=''}=params;
+    -const className = 'button';
+    -
+     let modsClasses = '';
+        if (mods){
+            const modsList= mods.split(',');
+            for(let i = 0; i < modsList.length;i++){
+                modsClasses=modsClasses+' '+className+'_'+modsList[i];
+            }
+        }
+    -const arrowMod = (arrowIcon)?" button"+"_withArrow":""; //-для удобства объявлеяется через переменную с юулевым знач
+    
+    button(type='button',class=className+modsClasses+arrowMod)=text
+        if arrowIcon
+            i.material-icons arrow_forward
+//-кнопка с текстом
+//-принимет объект params с ключами
+//-text - текст внутри кнопки
+//-mods -строка с модификаторами,перечисляемыми через запятую, может иметь следующие значения:
+//-full - кнопка,полностью залитая цветом
+//-border-белая кнопка с цветной границей
+//-bigFull-большая залитая цветом кнопка
+//-link -кнопка без границы и градиента, похожа на обычную ссылку
+//-hover -состояние hover
+//-Пример вызова:
+//-+button({mods:'full',text:'Click me'})-//
+    
